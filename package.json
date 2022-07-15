@@ -8,5 +8,15 @@
   "type": "library",
   "dependencies": {
     "com.cobilas.cobilascore": "1.0.0"
+  },
+  "publishConfig": {
+    "registry":"https://npm.pkg.github.com/@BelicusBr"
+  },
+  "repository": {
+    "url" : "https://github.com/BelicusBr/com.cobilas.unity.utility.git",
+    "type" : "git"
+  },
+  "relatedPackages": {
+    "com.cobilas.unity.utility": "1.0.0"
   }
 }
