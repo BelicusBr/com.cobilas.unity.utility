@@ -17,6 +17,6 @@
     "type" : "git"
   },
   "relatedPackages": {
-    "com.cobilas.unity.utility": "1.0.0"
+    "com.cobilas.unity.utility.tests": "1.0.0"
   }
 }
