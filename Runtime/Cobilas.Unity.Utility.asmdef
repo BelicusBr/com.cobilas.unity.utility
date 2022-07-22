@@ -6,12 +6,18 @@
     "allowUnsafeCode": false,
     "overrideReferences": true,
     "precompiledReferences": [
-        "Cobilas.Collections.dll",
         "CobilasCore.dll",
+        "Cobilas.Collections.dll",
         "CobilasCore.Extension.dll"
     ],
     "autoReferenced": true,
     "defineConstraints": [],
-    "versionDefines": [],
+    "versionDefines": [
+        {
+            "name": "com.cobilas.cobilascore",
+            "expression": "1.0",
+            "define": "COBILAS_CORE"
+        }
+    ],
     "noEngineReferences": false
 }
