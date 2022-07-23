@@ -1,8 +1,10 @@
 {
   "name": "com.cobilas.unity.utility",
-  "version": "1.0.0",
+  "version": "1.0.12",
   "displayName": "Cobilas Utility",
   "description": "Pacote de utilitarios para unity3d",
+  "licensesUrl": "https://github.com/BelicusBr/com.cobilas.unity.utility/blob/main/LICENSE.md",
+  "changelogUrl": "https://github.com/BelicusBr/com.cobilas.unity.utility/blob/main/CHANGELOG.md",
   "unity": "2019.1",
   "unityRelease": "0b5",
   "type": "library",
@@ -11,20 +13,12 @@
     "name": "Cobilas CTB"
   },
 
-  "gitDependencies": {
-    "com.cobilas.cobilascore": {
-		"type" : "github",
-		"version" : "1.0.0",
-		"userName" : "BelicusBr"
-	}
-  },
-
   "repository": {
     "url" : "https://github.com/BelicusBr/com.cobilas.unity.utility.git",
     "type" : "git"
   },
 
   "relatedPackages": {
-    "com.cobilas.unity.utility.tests": "1.0.0"
+    "com.cobilas.unity.utility.tests": "1.0.12"
   }
 }
