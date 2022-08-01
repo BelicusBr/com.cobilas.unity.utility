@@ -1,5 +1,10 @@
 # Changelog
-## [1.0.4] 23/07/2022
+## [1.0.13] 31/07/2022
+- Add CHANGELOG.md
+- Fix package.json
+- Add Cobilas Utility.asset
+- Remove Runtime\DependencyWarning.cs
+## [1.0.12] 23/07/2022
 - Add CHANGELOG.md
 - Fix package.json
 ## [1.0.11] 22/07/2022
