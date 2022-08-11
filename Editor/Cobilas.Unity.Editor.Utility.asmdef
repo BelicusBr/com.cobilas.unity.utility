@@ -1,0 +1,39 @@
+{
+    "name": "Cobilas.Unity.Editor.Utility",
+    "references": [
+        "Cobilas.Unity.Utility",
+        "Cobilas.Unity.Editor.Extensions"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "Cobilas.Collections.dll",
+        "CobilasCore.Extension.dll"
+    ],
+    "autoReferenced": true,
+    "defineConstraints": [
+        "UNITY_EDITOR"
+    ],
+    "versionDefines": [
+        {
+            "name": "com.cobilas.cobilascore",
+            "expression": "1.0",
+            "define": "COBILAS_CORE"
+        },
+        {
+            "name": "com.cobilas.unity.utility",
+            "expression": "1.0",
+            "define": "COBILAS_UTILITY"
+        },
+        {
+            "name": "com.cobilas.unity.editor.utility",
+            "expression": "1.0",
+            "define": "COBILAS_EDITOR_UTILITY"
+        }
+    ],
+    "noEngineReferences": false
+}

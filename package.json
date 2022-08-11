@@ -1,6 +1,6 @@
 {
   "name": "com.cobilas.unity.utility",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "displayName": "Cobilas Utility",
   "description": "Pacote de utilitarios para unity3d",
   "licensesUrl": "https://github.com/BelicusBr/com.cobilas.unity.utility/blob/main/LICENSE.md",
@@ -21,6 +21,6 @@
     "registry":"https://npm.pkg.github.com/@BelicusBr"
   },
   "relatedPackages": {
-    "com.cobilas.unity.utility.tests": "1.0.13"
+    "com.cobilas.unity.utility.tests": "1.0.14"
   }
 }
