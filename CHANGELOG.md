@@ -1,4 +1,8 @@
 # Changelog
+## [1.0.15] 13/08/2022
+- Change Editor\Cobilas.Unity.Editor.Utility.asmdef
+- Change Editor\CobilasFile.cs
+- Change Runtime\Cobilas.Unity.Utility.asmdef
 ## [1.0.14] 10/08/2022
 - Merge com.cobilas.unity.editor.utility@1.0.7
 ## [1.0.13] 31/07/2022

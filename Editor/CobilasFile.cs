@@ -40,15 +40,17 @@ namespace Cobilas.Unity.Editor.Utility {
             string newPath = null;
 
             if (AssetDatabase.IsValidFolder(assetfolderpath))
-                newPath = CobilasPaths.Combine(path, assetfolderpath, newFile);
-            else newPath = CobilasPaths.Combine(path, "Assets", newFile);
+                newPath = CobilasPaths.Combine(path, assetfolderpath, Path.GetFileNameWithoutExtension(newFile));
+            else newPath = CobilasPaths.Combine(path, "Assets", Path.GetFileNameWithoutExtension(newFile));
 
             string newPathCont = newPath;
             ulong index = 0;
-            while (File.Exists(newPathCont)) {
+            while (File.Exists(string.Format("{0}{1}", newPathCont, Path.GetExtension(newFile)))) {
                 index += 1;
-                newPathCont = $"{newPath} {index}";
+                newPathCont = string.Format("{0}({1})", newPath, index);
             }
+
+            newPathCont = string.Format("{0}{1}", newPathCont, Path.GetExtension(newFile));
 
             using (FileStream fileStream = new FileStream(newPathCont, FileMode.CreateNew, FileAccess.Write, FileShare.Write))
                 fileStream.Write(content, Encoding.UTF8);
