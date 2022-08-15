@@ -4,9 +4,9 @@ using UnityEngine;
 
 namespace Cobilas.Unity.Editor.Utility {
     public class CPropertyDrawer : PropertyDrawer {
-        protected const float BlankSpace = 2f;
-        protected float SingleLineHeight => EditorGUIUtility.singleLineHeight;
-        protected float SingleRowHeightWithBlankSpace => SingleLineHeight + BlankSpace;
+        public const float BlankSpace = 2f;
+        public static float SingleLineHeight => EditorGUIUtility.singleLineHeight;
+        public static float SingleRowHeightWithBlankSpace => SingleLineHeight + BlankSpace;
 
         public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
             => base.OnGUI(position, property, label);

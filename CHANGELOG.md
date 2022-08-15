@@ -1,4 +1,9 @@
 # Changelog
+## [1.0.15] 15/08/2022
+### Change
+A constante "BlankSpace" foi alterada de `protected const float BlankSpace;` para `public const float BlankSpace;`.<br/>
+A propriedade SingleLineHeight foi alterada de `protected float SingleLineHeight;` para `public static float SingleLineHeight;`.<br/>
+A propriedade SingleRowHeightWithBlankSpace foi alterada de `protected float SingleRowHeightWithBlankSpace;` para `public static float SingleRowHeightWithBlankSpace;`.<br/>
 ## [1.0.15] 13/08/2022
 - Change Editor\Cobilas.Unity.Editor.Utility.asmdef
 - Change Editor\CobilasFile.cs
