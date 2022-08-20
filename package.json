@@ -1,13 +1,13 @@
 {
   "name": "com.cobilas.unity.utility",
-  "version": "1.0.16",
+  "version": "1.0.17",
   "displayName": "Cobilas Utility",
   "description": "Pacote de utilitarios para unity3d",
   "licensesUrl": "https://github.com/BelicusBr/com.cobilas.unity.utility/blob/main/LICENSE.md",
   "changelogUrl": "https://github.com/BelicusBr/com.cobilas.unity.utility/blob/main/CHANGELOG.md",
   "unity": "2019.1",
   "unityRelease": "0b5",
-  "type": "class-library",
+  "type": "cb-utility",
 
   "author": {
     "name": "Cobilas CTB"
@@ -18,8 +18,5 @@
   },
   "publishConfig": {
     "registry":"https://npm.pkg.github.com/@BelicusBr"
-  },
-  "relatedPackages": {
-    "com.cobilas.unity.utility": "1.0.16"
   }
 }
