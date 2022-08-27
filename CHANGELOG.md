@@ -1,4 +1,10 @@
 # Changelog
+## [1.0.18] 27/08/2002
+### Add
+- Editor\ChangeVersion.cs
+- Runtime\CompareObject.cs
+- Runtime\RepaintTexture2D.cs
+- Runtime\PurposefulErrors.cs
 ## [1.0.16] 15/08/2022
 ### Change
 A constante "BlankSpace" foi alterada de `protected const float BlankSpace;` para `public const float BlankSpace;`.<br/>
