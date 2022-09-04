@@ -17,12 +17,16 @@ namespace Cobilas.Unity.Utility {
         private static string targetModule;
 
         public static Dictionary<string, DebugLogger[]> Logs => logs;
-
 #if UNITY_EDITOR
+        public static string DebugConsoleFolder => CobilasPaths.Combine(CobilasPaths.PersistentDataPath, "DebugConsole");
+        public static string DebugConsoleFile => CobilasPaths.Combine(DebugConsoleFolder, "DebugConsole.log");
+
         private static float timer;
         [InitializeOnLoadMethod]
         private static void Init() {
-            string filePath = CobilasPaths.Combine(CobilasPaths.PersistentDataPath, "DebugConsole.log");
+            string filePath = DebugConsoleFile;
+            if (!Directory.Exists(DebugConsoleFolder))
+                Directory.CreateDirectory(DebugConsoleFolder);
             if (File.Exists(filePath)) {
                 try {
                     FileStream temp;
@@ -35,7 +39,7 @@ namespace Cobilas.Unity.Utility {
                 timer += Time.unscaledDeltaTime;
                 if (((int)timer % 50) == 0) {
                     timer = 0;
-                    filePath = CobilasPaths.Combine(CobilasPaths.PersistentDataPath, "DebugConsole.log");
+                    filePath = DebugConsoleFile;
                     FileStream temp;
                     new BinaryFormatter().Serialize(temp = File.Create(filePath), logs);
                     temp.Dispose();
@@ -86,6 +90,27 @@ namespace Cobilas.Unity.Utility {
                     $"{E}");
             }
 #endif        
+        }
+
+        public static void PrintToFile()
+            => PrintToFile(CobilasPaths.Combine(CobilasPaths.StreamingAssetsPath, "logger"));
+
+        public static void PrintToFile(string folder) {
+            if (!Directory.Exists(folder))
+                Directory.CreateDirectory(folder);
+            foreach (var item in logs)
+                using (StreamWriter writer = File.CreateText(Path.Combine(folder, string.Format("{0}.txt", item.Key))))
+                    for (int I = 0; I < ArrayManipulation.ArrayLength(item.Value); I++) {
+                        DebugLogger logger = item.Value[I];
+                        writer.WriteLine("[{0}]", logger.Time);
+                        writer.WriteLine("LogType:{0}", logger.Type.ToString());
+                        writer.WriteLine("[Message]\r\n{0}", logger.MSM.TrimEnd());
+                        writer.WriteLine("[Tracking]\r\n{0}", logger.Tracking.TrimEnd());
+                        writer.WriteLine("//{0}", string.Empty.PadRight(40, '='));
+                    }
+#if UNITY_EDITOR
+            AssetDatabase.Refresh();
+#endif
         }
 
         public static void SetModule(string name)

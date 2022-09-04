@@ -1,4 +1,8 @@
 # Changelog
+## [1.0.19] 03/09/2022
+### Add
+- Editor\Win\DebugConsoleWin.cs
+- Runtime\DebugConsole\DebugConsole.cs
 ## [1.0.18] 27/08/2002
 ### Add
 - Editor\ChangeVersion.cs
