@@ -1,30 +1,32 @@
 ﻿using System;
+using Cobilas.Unity.Utility;
 
 namespace UnityEngine {
     using UERandom = UnityEngine.Random;
+    [Obsolete("Use Cobilas.Unity.Utility.Randomico class")]
     public static class CobilasRandom {
 
         /// <summary>Returns a random rotation (Read Only).</summary>
-        public static Quaternion rotation => UERandom.rotation;
+        public static Quaternion rotation => Randomico.rotation;
         /// <summary>Returns a random point on the surface of a sphere with radius 1 (Read Only).</summary>
-        public static Vector3 onUnitSphere => UERandom.onUnitSphere;
+        public static Vector3 onUnitSphere => Randomico.onUnitSphere;
         /// <summary>Returns a random point inside a circle with radius 1 (Read Only).</summary>
-        public static Vector2 insideUnitCircle => UERandom.insideUnitCircle;
+        public static Vector2 insideUnitCircle => Randomico.insideUnitCircle;
         /// <summary>Returns a random point inside a sphere with radius 1 (Read Only).</summary>
-        public static Vector3 insideUnitSphere => UERandom.insideUnitSphere;
+        public static Vector3 insideUnitSphere => Randomico.insideUnitSphere;
         /// <summary>Returns a random rotation with uniform distribution (Read Only).</summary>
-        public static Quaternion rotationUniform => UERandom.rotationUniform;
+        public static Quaternion rotationUniform => Randomico.rotationUniform;
         /// <summary>Gets/Sets the full internal state of the random number generator.</summary>
-        public static UERandom.State state { get => UERandom.state; set => UERandom.state = value; }
+        public static UERandom.State state { get => Randomico.state; set => Randomico.state = value; }
         /// <summary>Returns a random number between 0.0 [inclusive] and 1.0 [inclusive] (Read Only).</summary>
-        public static float value => UERandom.value;
+        public static float value => Randomico.value;
         /// <summary>Less than <c>0.5f</c> is false, greater than <c>0.5f</c> is true.(<c><seealso cref="CobilasRandom"/>.value > 0.5f</c>)</summary>
-        public static bool BooleanRandom => value > .5f;
+        public static bool BooleanRandom => Randomico.BooleanRandom;
 
         /// <summary>Initializes the random number generator state with a seed.</summary>
         /// <param name="seed">Seed used to initialize the random number generator.</param>
         public static void InitState(int seed)
-            => UERandom.InitState(seed);
+            => Randomico.InitState(seed);
 
         /// <summary>Generates a random color from HSV and alpha ranges.</summary>
         /// <param name="hueMin">Minimum hue [0..1].</param>
@@ -37,7 +39,7 @@ namespace UnityEngine {
         /// <param name="alphaMax">Maximum alpha [0..1].</param>
         /// <returns>A random color with HSV and alpha values in the input ranges.</returns>
         public static Color ColorHSV(float hueMin, float hueMax, float saturationMin, float saturationMax, float valueMin, float valueMax, float alphaMin, float alphaMax)
-            => UERandom.ColorHSV(hueMin, hueMax, saturationMin, saturationMax, valueMin, valueMax, alphaMin, alphaMax);
+            => Randomico.ColorHSV(hueMin, hueMax, saturationMin, saturationMax, valueMin, valueMax, alphaMin, alphaMax);
 
         /// <summary>Generates a random color from HSV and alpha ranges.</summary>
         /// <param name="hueMin">Minimum hue [0..1].</param>
@@ -48,7 +50,7 @@ namespace UnityEngine {
         /// <param name="valueMax">Maximum value [0..1].</param>
         /// <returns>A random color with HSV and alpha values in the input ranges.</returns>
         public static Color ColorHSV(float hueMin, float hueMax, float saturationMin, float saturationMax, float valueMin, float valueMax)
-            => UERandom.ColorHSV(hueMin, hueMax, saturationMin, saturationMax, valueMin, valueMax);
+            => Randomico.ColorHSV(hueMin, hueMax, saturationMin, saturationMax, valueMin, valueMax);
 
         /// <summary>Generates a random color from HSV and alpha ranges.</summary>
         /// <param name="hueMin">Minimum hue [0..1].</param>
@@ -57,19 +59,19 @@ namespace UnityEngine {
         /// <param name="saturationMax">Maximum saturation[0..1].</param>
         /// <returns>A random color with HSV and alpha values in the input ranges.</returns>
         public static Color ColorHSV(float hueMin, float hueMax, float saturationMin, float saturationMax)
-            => UERandom.ColorHSV(hueMin, hueMax, saturationMin, saturationMax);
+            => Randomico.ColorHSV(hueMin, hueMax, saturationMin, saturationMax);
 
         /// <summary>Generates a random color from HSV and alpha ranges.</summary>
         /// <param name="hueMin">Minimum hue [0..1].</param>
         /// <param name="hueMax">Maximum hue [0..1].</param>
         /// <returns>A random color with HSV and alpha values in the input ranges.</returns>
         public static Color ColorHSV(float hueMin, float hueMax)
-            => UERandom.ColorHSV(hueMin, hueMax);
+            => Randomico.ColorHSV(hueMin, hueMax);
 
         /// <summary>Generates a random color from HSV and alpha ranges.</summary>
         /// <returns>A random color with HSV and alpha values in the input ranges.</returns>
         public static Color ColorHSV()
-            => UERandom.ColorHSV();
+            => Randomico.ColorHSV();
 
         public static byte ByteRange(byte min, byte max)
             => (byte)UlongRange(min, max);
@@ -98,13 +100,8 @@ namespace UnityEngine {
         public static uint UintRange()
             => (uint)UlongRange(uint.MinValue, uint.MaxValue);
 
-        public static ulong UlongRange(ulong min, ulong max) {
-            float dmin = min < 0 ? 0 : min;
-            float dmax = max < 0 ? 0 : max;
-            ulong compri = (ulong)Math.Abs(dmin - dmax);
-            ulong smin = min < max ? min : max;
-            return (ulong)(smin + (value * compri));
-        }
+        public static ulong UlongRange(ulong min, ulong max)
+            => Randomico.UlongRange(min, max);
 
         public static ulong UlongRange(ulong max)
             => UlongRange(ulong.MinValue, max);
@@ -132,21 +129,18 @@ namespace UnityEngine {
 
         /// <summary>Return a random integer number between min [inclusive] and max [exclusive] (ReadOnly).</summary>
         public static int IntRange(int min, int max)
-            => UERandom.Range(min, max);
+            => Randomico.IntRange(min, max);
 
         /// <summary>Return a random integer number between min [-2147483648] and max [exclusive] (ReadOnly).</summary>
         public static int IntRange(int max)
-            => UERandom.Range(int.MinValue, max);
+            => Randomico.IntRange(int.MinValue, max);
 
         /// <summary>Return a random integer number between min [-2147483648] and max [2147483647] (ReadOnly).</summary>
         public static int IntRange()
-            => UERandom.Range(int.MinValue, int.MaxValue);
+            => Randomico.IntRange(int.MinValue, int.MaxValue);
 
-        public static long LongRange(long min, long max) {
-            long compri = Math.Abs(min - max);
-            long smin = min < max ? min : max;
-            return smin + (long)(value * compri);
-        }
+        public static long LongRange(long min, long max)
+            => Randomico.LongRange(min, max);
 
         public static long LongRange(long max)
             => LongRange(long.MinValue, max);
@@ -156,21 +150,18 @@ namespace UnityEngine {
 
         /// <summary>Return a random float number between min [inclusive] and max [exclusive] (ReadOnly).</summary>
         public static float FloatRange(float min, float max)
-            => UERandom.Range(min, max);
+            => Randomico.FloatRange(min, max);
 
         /// <summary>Return a random float number between min [3.40282347E+38F] and max [exclusive] (ReadOnly).</summary>
         public static float FloatRange(float max)
-            => UERandom.Range(float.MinValue, max);
+            => Randomico.FloatRange(float.MinValue, max);
 
         /// <summary>Return a random float number between min [3.40282347E+38F] and max [3.40282347E+38F] (ReadOnly).</summary>
         public static float FloatRange()
-            => UERandom.Range(float.MinValue, float.MaxValue);
+            => Randomico.FloatRange(float.MinValue, float.MaxValue);
 
-        public static double DoubleRange(double min, double max) {
-            double compri = Math.Abs(min - max);
-            double smin = min < max ? min : max;
-            return smin + (value * compri);
-        }
+        public static double DoubleRange(double min, double max)
+            => Randomico.DoubleRange(min, max);
 
         public static double DoubleRange(double max)
             => DoubleRange(double.MinValue, max);
@@ -178,11 +169,8 @@ namespace UnityEngine {
         public static double DoubleRange()
             => DoubleRange(double.MinValue, double.MaxValue);
 
-        public static decimal DecimalRange(decimal min, decimal max) {
-            decimal compri = Math.Abs(min - max);
-            decimal smin = min < max ? min : max;
-            return smin + ((decimal)value * compri);
-        }
+        public static decimal DecimalRange(decimal min, decimal max)
+            => Randomico.DecimalRange(min, max);
 
         public static decimal DecimalRange(decimal max)
             => DecimalRange(decimal.MinValue, max);

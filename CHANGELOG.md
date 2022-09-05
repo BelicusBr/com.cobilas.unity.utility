@@ -1,4 +1,11 @@
 # Changelog
+## [1.0.20] 04/09/2022
+### Add
+Foi adicionado GameDataManager para guarda dados do jogo, em suma o bom e velho savegame.<br/>
+A classe UnityPath foi adicionado.<br/>
+A classe Randomico foi adicionado.<br/>
+### Change
+As classes `CobilasPaths` e `CobilasRandom` foram substituidos por `UnityPath` e `Randomico`.
 ## [1.0.19] 03/09/2022
 ### Add
 - Editor\Win\DebugConsoleWin.cs

@@ -1,7 +1,7 @@
 ﻿using System.IO;
 
 namespace Cobilas.Unity.Utility {
-    public static class CobilasPaths {
+    public static class UnityPath {
 
         public static string AssetsPath => UnityEngine.Application.dataPath;
         public static string PersistentDataPath => UnityEngine.Application.persistentDataPath;
@@ -14,6 +14,7 @@ namespace Cobilas.Unity.Utility {
 #endif
         }
 #if UNITY_EDITOR
+        /// <summary>ProjectFolderPath in editor only</summary>
         public static string ProjectFolderPath => GetDirectoryName(UnityEngine.Application.dataPath);
 #endif
 
