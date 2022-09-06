@@ -27,10 +27,10 @@ namespace Cobilas.Unity.Editor.Utility {
         private static bool MRACOC;
         private static bool isAlpha;
         private static List<ConfigItem> configs;
-        private static string PersistentBuildCountFolder => CobilasPaths.Combine(CobilasPaths.ProjectFolderPath, "BuildCount");
-        private static string PersistentBuildCountFile => CobilasPaths.Combine(PersistentBuildCountFolder, "MyCount.txt");
-        private static string ChangeVersionFolder => CobilasPaths.Combine(CobilasPaths.ProjectFolderPath, "ChangeVersion");
-        private static string ChangeVersionConfigFile => CobilasPaths.Combine(ChangeVersionFolder, "Config.txt");
+        private static string PersistentBuildCountFolder => UnityPath.Combine(UnityPath.ProjectFolderPath, "BuildCount");
+        private static string PersistentBuildCountFile => UnityPath.Combine(PersistentBuildCountFolder, "MyCount.txt");
+        private static string ChangeVersionFolder => UnityPath.Combine(UnityPath.ProjectFolderPath, "ChangeVersion");
+        private static string ChangeVersionConfigFile => UnityPath.Combine(ChangeVersionFolder, "Config.txt");
 
         [InitializeOnLoadMethod]
         private static void Init() {

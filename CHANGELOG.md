@@ -1,4 +1,10 @@
 # Changelog
+## [1.0.21] 05/09/2022
+## Obsolete
+- CobilasPaths.cs
+- CobilasRandom.cs
+- CobilasFile.cs
+- CobilasFolder.cs
 ## [1.0.20] 04/09/2022
 ### Add
 Foi adicionado GameDataManager para guarda dados do jogo, em suma o bom e velho savegame.<br/>

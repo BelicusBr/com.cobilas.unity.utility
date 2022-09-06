@@ -31,7 +31,7 @@ namespace Cobilas.Unity.Editor.Utility.Win {
         private string[] nameModules;
         private DebugLogger[] current;
 
-        private static string ConfigFile => CobilasPaths.Combine(DebugConsole.DebugConsoleFolder, "Config.txt");
+        private static string ConfigFile => UnityPath.Combine(DebugConsole.DebugConsoleFolder, "Config.txt");
 
         private void OnEnable() {
             LoadConfig();

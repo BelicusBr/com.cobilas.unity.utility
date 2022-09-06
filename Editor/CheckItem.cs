@@ -4,14 +4,14 @@ using UnityEditor;
 namespace Cobilas.Unity.Editor.Utility {
     /// <summary>Pega informações de itens na aba projeto.</summary>
     public static class CheckItem {
-        [MenuItem("Tools/Cobilas/Check item")]
+        [MenuItem("Tools/Check item")]
         private static void CheckSelectionItem()
             => MonoBehaviour.print($"Path:{GetAssetPath()}|Type:{GetSelectionItemType()}");
 
-        public static string GetAssetPath()
+        private static string GetAssetPath()
             => AssetDatabase.GetAssetPath(Selection.activeObject);
 
-        public static System.Type GetSelectionItemType()
+        private static System.Type GetSelectionItemType()
             => Selection.activeObject.GetType();
     }
 }

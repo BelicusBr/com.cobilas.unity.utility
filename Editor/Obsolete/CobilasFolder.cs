@@ -3,10 +3,11 @@ using UnityEditor;
 using UnityEngine;
 
 namespace Cobilas.Unity.Editor.Utility {
+    [System.Obsolete("Use Cobilas.Unity.Editor.Utility.UnityFolder class")]
     public static class CobilasFolder {
 
-        public static string RootFolder => Path.GetDirectoryName(Application.dataPath);
-
+        public static string RootFolder => UnityFolder.RootFolder;
+#if NO_CODE
         [MenuItem("Tools/Cobilas folder/Utility folder")]
         [MenuItem("Assets/Create/Cobilas folder/Utility folder")]
         private static void InitUtilityFolder()
@@ -94,5 +95,6 @@ namespace Cobilas.Unity.Editor.Utility {
             else AssetDatabase.CreateFolder("Assets", nameFolder);
             AssetDatabase.Refresh();
         }
+#endif
     }
 }

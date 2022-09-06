@@ -18,8 +18,8 @@ namespace Cobilas.Unity.Utility {
 
         public static Dictionary<string, DebugLogger[]> Logs => logs;
 #if UNITY_EDITOR
-        public static string DebugConsoleFolder => CobilasPaths.Combine(CobilasPaths.PersistentDataPath, "DebugConsole");
-        public static string DebugConsoleFile => CobilasPaths.Combine(DebugConsoleFolder, "DebugConsole.log");
+        public static string DebugConsoleFolder => UnityPath.Combine(UnityPath.PersistentDataPath, "DebugConsole");
+        public static string DebugConsoleFile => UnityPath.Combine(DebugConsoleFolder, "DebugConsole.log");
 
         private static float timer;
         [InitializeOnLoadMethod]
@@ -93,7 +93,7 @@ namespace Cobilas.Unity.Utility {
         }
 
         public static void PrintToFile()
-            => PrintToFile(CobilasPaths.Combine(CobilasPaths.StreamingAssetsPath, "logger"));
+            => PrintToFile(UnityPath.Combine(UnityPath.StreamingAssetsPath, "logger"));
 
         public static void PrintToFile(string folder) {
             if (!Directory.Exists(folder))

@@ -5,7 +5,7 @@ using System.Text;
 using Cobilas.Unity.Utility;
 
 namespace Cobilas.Unity.Editor.Utility {
-    public static class CobilasFile {
+    public static class UnityFile {
 
         [MenuItem("Assets/Create/Cobilas file/Text file")]
         public static void InitTextFile()
@@ -35,13 +35,13 @@ namespace Cobilas.Unity.Editor.Utility {
             => CreateFile(newFile, "");
 
         private static void CreateFile(string newFile, string content) {
-            string path = CobilasPaths.GetDirectoryName(Application.dataPath);
+            string path = UnityPath.GetDirectoryName(Application.dataPath);
             string assetfolderpath = AssetDatabase.GetAssetPath(Selection.activeObject);
             string newPath = null;
 
             if (AssetDatabase.IsValidFolder(assetfolderpath))
-                newPath = CobilasPaths.Combine(path, assetfolderpath, Path.GetFileNameWithoutExtension(newFile));
-            else newPath = CobilasPaths.Combine(path, "Assets", Path.GetFileNameWithoutExtension(newFile));
+                newPath = UnityPath.Combine(path, assetfolderpath, Path.GetFileNameWithoutExtension(newFile));
+            else newPath = UnityPath.Combine(path, "Assets", Path.GetFileNameWithoutExtension(newFile));
 
             string newPathCont = newPath;
             ulong index = 0;
