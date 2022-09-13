@@ -1,11 +1,11 @@
 ﻿using System;
+using System.IO;
 using System.Text;
 using UnityEngine;
 using System.Reflection;
 using Cobilas.Collections;
 using System.Collections.Generic;
 #if UNITY_EDITOR
-using System.IO;
 using UnityEditor;
 using System.Runtime.Serialization.Formatters.Binary;
 #endif

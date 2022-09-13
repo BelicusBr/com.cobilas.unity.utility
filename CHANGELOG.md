@@ -1,4 +1,7 @@
 # Changelog
+## [1.0.22] 13/09/2022
+### (Fix)DebugConsole.cs
+O namespace `System.IO` foi realocado pra fora da condição `#if UNITY_EDITOR`.
 ## [1.0.21] 05/09/2022
 ## Obsolete
 - CobilasPaths.cs

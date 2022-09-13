@@ -1,13 +1,14 @@
 {
     "name": "com.cobilas.unity.utility",
-    "version": "1.0.21",
+    "version": "1.0.22",
     "repository": "https://github.com/BelicusBr/com.cobilas.unity.utility.git",
     "relatedPackages": [
         "1.0.17",
 		"1.0.18",
 		"1.0.19",
 		"1.0.20",
-		"1.0.21"
+		"1.0.21",
+		"1.0.22"
     ],
     "gitDependencies": [
         {
