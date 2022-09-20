@@ -163,6 +163,7 @@ namespace Cobilas.Unity.Editor.Utility.ChangeVersion {
                     writer.WriteLine("-b:{0}", infoTemp.versions[I].isBuild);
                     writer.WriteLine("-m:{0}", infoTemp.versions[I].isMRACOC);
                     writer.WriteLine("-u:{0}", infoTemp.versions[I].updateWhenClose);
+					writer.WriteLine("-au:{0}", infoTemp.versions[I].AlreadyUpdatedWhenClose);
                 }
         }
 
@@ -204,6 +205,11 @@ namespace Cobilas.Unity.Editor.Utility.ChangeVersion {
                         case "-u":
                             vTemp = res[name];
                             vTemp.updateWhenClose = bool.Parse(value);
+                            res[name] = vTemp;
+                            break;
+                        case "-au":
+                            vTemp = res[name];
+                            vTemp.AlreadyUpdatedWhenClose = bool.Parse(value);
                             res[name] = vTemp;
                             break;
                     }
