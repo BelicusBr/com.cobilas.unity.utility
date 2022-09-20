@@ -1,4 +1,7 @@
 # Changelog
+## [1.0.23] 20/09/2022
+### (Change) ChangeVersion
+O ChangeVersion foi transformado em janela agora.
 ## [1.0.22] 13/09/2022
 ### (Fix)DebugConsole.cs
 O namespace `System.IO` foi realocado pra fora da condição `#if UNITY_EDITOR`.
