@@ -1,8 +1,7 @@
 {
     "name": "Cobilas.Unity.Editor.Utility",
     "references": [
-        "Cobilas.Unity.Utility",
-        "Cobilas.Unity.Editor.Extensions"
+        "Cobilas.Unity.Utility"
     ],
     "includePlatforms": [
         "Editor"

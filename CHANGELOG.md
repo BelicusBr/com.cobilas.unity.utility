@@ -1,4 +1,8 @@
 # Changelog
+## [1.0.24] 05/11/2022
+### (Fix)ChangeVersionWin.cs
+O método `ChangeVersionWin.LoadConfig()` não possuia uma verificação que determina<br/>
+se o arquivo Config.txt existe.
 ## [1.0.23] 20/09/2022
 ### (Change) ChangeVersion
 O ChangeVersion foi transformado em janela agora.

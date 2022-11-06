@@ -137,6 +137,7 @@ namespace Cobilas.Unity.Editor.Utility.ChangeVersion {
         }
 
         private static ChangeVersionConfig LoadConfig() {
+            if (!File.Exists(ChangeConfigFile)) return new ChangeVersionConfig();
             ChangeVersionConfig res = new ChangeVersionConfig();
             using (StreamReader reader = File.OpenText(ChangeConfigFile)) {
                 string temp = reader.ReadLine();
