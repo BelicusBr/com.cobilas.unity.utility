@@ -1,0 +1,19 @@
+{
+    "name": "Cobilas.Unity.Test.Editor.Utility.ChangeVersion",
+    "references": [
+        "Cobilas.Unity.Utility"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "Cobilas.Collections.dll"
+    ],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
