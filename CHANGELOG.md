@@ -1,4 +1,9 @@
 # Changelog
+## [1.0.26] 11/11/2022
+### ChangeVersion
+ChangeVersion se tornou com.cobilas.unity.changeversion@1.0.0
+### DebugConsole
+DebugConsole se tornou com.cobilas.unity.debugconsole@1.0.0
 ## [1.0.24] 05/11/2022
 ### (Fix)ChangeVersionWin.cs
 O método `ChangeVersionWin.LoadConfig()` não possuia uma verificação que determina<br/>
