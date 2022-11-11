@@ -1,7 +1,8 @@
 {
     "name": "Cobilas.Unity.Editor.Utility",
     "references": [
-        "Cobilas.Unity.Utility"
+        "Cobilas.Unity.Utility",
+        "Cobilas.Core"
     ],
     "includePlatforms": [
         "Editor"
@@ -9,10 +10,7 @@
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": true,
-    "precompiledReferences": [
-        "Cobilas.Collections.dll",
-        "CobilasCore.Extension.dll"
-    ],
+    "precompiledReferences": [],
     "autoReferenced": true,
     "defineConstraints": [
         "UNITY_EDITOR"

@@ -1,1 +1,0 @@
-Remover objetos obsoletos na versão 1.0.26
