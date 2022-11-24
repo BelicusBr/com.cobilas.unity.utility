@@ -1,4 +1,8 @@
 # Changelog
+## [1.0.28] 23/11/2022
+### Add
+Foi adicionado em `UnityFile` os métodos `void:UnityFile.InitEditorCSharpFile()` e 
+`void:UnityFile.InitEditorWinCSharpFile()`
 ## [1.0.26] 11/11/2022
 ### ChangeVersion
 ChangeVersion se tornou com.cobilas.unity.changeversion@1.0.0
