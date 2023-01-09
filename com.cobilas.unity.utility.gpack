@@ -1,6 +1,6 @@
 {
     "name": "com.cobilas.unity.utility",
-    "version": "1.0.28",
+    "version": "1.0.29",
     "repository": "https://github.com/BelicusBr/com.cobilas.unity.utility.git",
     "relatedPackages": [
         "1.0.17",
