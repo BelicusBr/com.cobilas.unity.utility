@@ -1,4 +1,8 @@
 # Changelog
+## [1.0.29] 09/01/2023
+### Add
+Classes asincronas foram adicionadas.
+Corotinas com mais funções adicionadas.
 ## [1.0.28] 23/11/2022
 ### Add
 Foi adicionado em `UnityFile` os métodos `void:UnityFile.InitEditorCSharpFile()` e 
