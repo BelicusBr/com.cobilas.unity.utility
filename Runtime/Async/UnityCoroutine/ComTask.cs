@@ -5,7 +5,7 @@ using System.Collections;
 namespace Cobilas.Unity.Utility {
     /// <summary>Commonplace Task</summary>
     public sealed class ComTask {
-        private int id;
+        private readonly int id;
         public Coroutine coroutine;
         private Exception exception;
         private ComTaskStatus status;

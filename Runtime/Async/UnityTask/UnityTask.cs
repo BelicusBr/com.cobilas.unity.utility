@@ -34,6 +34,7 @@ namespace Cobilas.Unity.Utility {
 
         public UnityTask(Action<UnityTask> action, CancellationTokenSource source, UnityTaskResult result) : this() {
             this.myAction = action;
+            this.myResult = result;
             this.myTask = new Task(TaskAction, (this.source = source).Token);
         }
 

@@ -61,7 +61,7 @@ namespace Cobilas.Unity.Editor.Utility {
         private static void CreateFile(string newFile, string content) {
             string path = UnityPath.GetDirectoryName(Application.dataPath);
             string assetfolderpath = AssetDatabase.GetAssetPath(Selection.activeObject);
-            string newPath = null;
+            string newPath;
 
             if (AssetDatabase.IsValidFolder(assetfolderpath))
                 newPath = UnityPath.Combine(path, assetfolderpath, Path.GetFileNameWithoutExtension(newFile));

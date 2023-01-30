@@ -3,8 +3,8 @@ using System.Collections.Generic;
 
 namespace Cobilas.Unity.Utility {
     public class RequestedCoroutines : MonoBehaviour {
-        private static List<ComTask> requestedInitialization;
-        private static List<ComTask> finalizationRequested;
+        private static readonly List<ComTask> finalizationRequested;
+        private static readonly List<ComTask> requestedInitialization;
 
         static RequestedCoroutines()
         {

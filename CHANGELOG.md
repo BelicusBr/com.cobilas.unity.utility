@@ -1,4 +1,11 @@
 # Changelog
+## [1.0.30] - 30/01/2023
+### Changed
+- Remoção de atribuições desnecessárias.
+- Transformando possiveis campos em `readonly`.
+- No método `void:RepaintTexture2D.Paint()` a instrução `modifiedTexture.SetPixels` foi alterada para `modifiedTexture.SetPixels32` por questões de desempenho.
+### Fixed
+- O parâmetro `UnityTaskResult result` do construdo da classe `UnityTask` não erá atribuido.
 ## [1.0.29] 09/01/2023
 ### Add
 Classes asincronas foram adicionadas.

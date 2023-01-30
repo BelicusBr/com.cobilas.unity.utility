@@ -38,9 +38,10 @@ namespace Cobilas.Unity.Utility {
 
         private void Paint() {
             Color[] pixes = mainTexture.GetPixels();
-            for (int I = 0; I < ArrayManipulation.ArrayLength(pixes); I++)
-                pixes[I] = pixes[I] * tint;
-            modifiedTexture.SetPixels(pixes);
+            Color32[] color32s = new Color32[ArrayManipulation.ArrayLength(pixes)];
+            for (int I = 0; I < color32s.Length; I++)
+                color32s[I] = pixes[I] * tint;
+            modifiedTexture.SetPixels32(color32s);
             modifiedTexture.Apply();
         }
 
