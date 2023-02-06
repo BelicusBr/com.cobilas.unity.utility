@@ -1,4 +1,9 @@
 # Changelog
+## [1.0.31] - 06/02/2023
+### Fixed
+#### Cancelamento indevido de tarefa [#ISE0001](https://github.com/BelicusBr/com.cobilas.unity.utility/issues/2)
+Após o editor sair para o modo [`PlayModeStateChange.ExitingPlayMode`](https://docs.unity3d.com/ScriptReference/PlayModeStateChange.ExitingPlayMode.html) todas as tarefas assíncronas são canceladas o que pode ocasionar o erro de [`ObjectDisposedException`](https://learn.microsoft.com/en-us/dotnet/api/system.objectdisposedexception?view=netframework-4.7.1).</br>
+Agora ao cancelar uma tarefa assíncronas no modo `PlayModeStateChange.ExitingPlayMode` é verificado se a tarefa não foi cancelada e descartada.
 ## [1.0.30] - 30/01/2023
 ### Changed
 - Remoção de atribuições desnecessárias.
