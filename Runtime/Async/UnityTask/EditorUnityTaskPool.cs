@@ -26,7 +26,8 @@ namespace Cobilas.Unity.Utility {
                         break;
                     case PlayModeStateChange.ExitingPlayMode:
                         for (int I = 0; I < ArrayManipulation.ArrayLength(tasks); I++)
-                            tasks[I].Cancel();
+                            if (!tasks[I].IsCancellationRequested && !tasks[I].IsDisposed)
+                                tasks[I].Cancel();
                         break;
                 }
             };
