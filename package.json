@@ -23,7 +23,9 @@
   },
   "keywords": [
     "unity3d",
-    "utility"
+    "utility",
+    "C#",
+    "CSharp"
   ],
   "license": "MIT",
   "dependencies": {
