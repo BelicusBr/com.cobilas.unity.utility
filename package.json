@@ -1,6 +1,6 @@
 {
   "name": "com.cobilas.unity.utility",
-  "version": "2.3.2",
+  "version": "2.5.2",
   "displayName": "Cobilas Utility",
   "description": "Pacote de utilitarios para unity3d",
   "licensesUrl": "https://github.com/BelicusBr/com.cobilas.unity.utility/blob/main/LICENSE.md",
@@ -29,6 +29,6 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "com.cobilas.core": "^1.0.3"
+    "com.cobilas.core": "^2.0.0"
   }
 }

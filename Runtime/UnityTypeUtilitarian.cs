@@ -5,10 +5,10 @@ using Cobilas.Collections;
 namespace Cobilas.Unity.Utility {
     public static class UnityTypeUtility {
         public static Assembly[] GetAssemblies()
-            => CobilasTypeUtility.GetAssemblies();
+            => TypeUtilitarian.GetAssemblies();
 
         public static bool TypeExist(string fullName)
-            => CobilasTypeUtility.TypeExist(fullName);
+            => TypeUtilitarian.TypeExist(fullName);
 
         public static Type GetType(string fullName) {
             Type[] temp = GetAllTypes();

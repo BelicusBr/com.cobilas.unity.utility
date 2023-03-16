@@ -4,6 +4,10 @@ using UnityEngine;
 namespace Cobilas.Unity.Utility {
     using UERandom = UnityEngine.Random;
     public static class Randomico {
+        /*
+         2.4.2 stackoverfloo no decimarange
+        dispose problema unitytask
+         */
 
         /// <summary>Returns a random rotation (Read Only).</summary>
         public static Quaternion rotation => UERandom.rotation;
@@ -99,13 +103,8 @@ namespace Cobilas.Unity.Utility {
         public static uint UintRange()
             => (uint)UlongRange(uint.MinValue, uint.MaxValue);
 
-        public static ulong UlongRange(ulong min, ulong max) {
-            float dmin = min < 0 ? 0 : min;
-            float dmax = max < 0 ? 0 : max;
-            ulong compri = (ulong)Math.Abs(dmin - dmax);
-            ulong smin = min < max ? min : max;
-            return (ulong)(smin + (value * compri));
-        }
+        public static ulong UlongRange(ulong min, ulong max)
+            => (ulong)DecimalRange(min, max);
 
         public static ulong UlongRange(ulong max)
             => UlongRange(ulong.MinValue, max);
@@ -143,11 +142,8 @@ namespace Cobilas.Unity.Utility {
         public static int IntRange()
             => UERandom.Range(int.MinValue, int.MaxValue);
 
-        public static long LongRange(long min, long max) {
-            long compri = Math.Abs(min - max);
-            long smin = min < max ? min : max;
-            return smin + (long)(value * compri);
-        }
+        public static long LongRange(long min, long max)
+            => (long)DecimalRange(min, max);
 
         public static long LongRange(long max)
             => LongRange(long.MinValue, max);
@@ -167,11 +163,8 @@ namespace Cobilas.Unity.Utility {
         public static float FloatRange()
             => UERandom.Range(float.MinValue, float.MaxValue);
 
-        public static double DoubleRange(double min, double max) {
-            double compri = Math.Abs(min - max);
-            double smin = min < max ? min : max;
-            return smin + (value * compri);
-        }
+        public static double DoubleRange(double min, double max)
+            => (min < max ? min : max) + 1d * Math.Abs(min - max);
 
         public static double DoubleRange(double max)
             => DoubleRange(double.MinValue, max);
@@ -180,8 +173,25 @@ namespace Cobilas.Unity.Utility {
             => DoubleRange(double.MinValue, double.MaxValue);
 
         public static decimal DecimalRange(decimal min, decimal max) {
-            decimal compri = Math.Abs(min - max);
-            decimal smin = min < max ? min : max;
+            decimal smin;
+            decimal compri;
+            if ((min < 0 && max > 0) || (min > 0 && max < 0)) {
+                decimal minPorc = min < 0m ? min / decimal.MinValue : min / decimal.MaxValue;
+                decimal maxPorc = max < 0m ? max / decimal.MinValue : max / decimal.MaxValue;
+                minPorc = min < 0 ? -minPorc : minPorc;
+                maxPorc = max < 0 ? -maxPorc : maxPorc;
+                compri = Math.Abs(minPorc - maxPorc);
+                smin = minPorc < maxPorc ? minPorc : maxPorc;
+
+                compri = smin + ((decimal)value * compri);
+                UnityEngine.Debug.Log(compri);
+
+                if (compri < 0) return -compri * decimal.MinValue;
+                else if (compri > 0) return compri * decimal.MaxValue;
+                else return decimal.Zero;
+            }
+            compri = Math.Abs(min - max);
+            smin = min < max ? min : max;
             return smin + ((decimal)value * compri);
         }
 

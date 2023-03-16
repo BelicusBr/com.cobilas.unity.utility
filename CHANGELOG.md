@@ -1,4 +1,9 @@
 # Changelog
+## [2.5.2] - 16/03/2023
+### Fixed
+No método `DecimalRange` Tinha a possibilidade de ocorrer StackOverflow.
+### Fixed
+Ao cancelar uma `UnityTask` ao entrar no modo editor pode ocorrer um `InvalidOperationalException`.
 ## [2.3.2] - 12/02/2023
 ### Fixed (EditorUnityTaskPool)
 Quando o editor entrava no modo `PlayModeStateChange.ExitingPlayMode` poderia acontecer da ação assincrona ter uma nova requisição de cancelamento

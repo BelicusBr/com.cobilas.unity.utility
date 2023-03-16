@@ -83,7 +83,8 @@ namespace Cobilas.Unity.Utility {
             if (disposed) 
                 throw new ObjectDisposedException($"The object {nameof(UnityTask)} has already been discarded");
             disposed = true;
-            myTask?.Dispose();
+            if (!source.IsCancellationRequested)
+                myTask?.Dispose();
             source?.Dispose();
         }
 
