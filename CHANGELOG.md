@@ -1,4 +1,14 @@
 # Changelog
+## [2.6.0] - 18/03/2023
+### Added
+Os atributos `AButtonAttribute`, `ARepeatButtonAttribute` e `ReadOnlyVarAttribute` foram adicionados.</br>
+As classes `GarbageCollector` e `MonitorStatus` foram adicionados.
+#### AButtonAttribute & ARepeatButtonAttribute
+Os atributos `ARepeatButtonAttribute` e `AButtonAttribute` podem ser adicionados á um campo de tipo `Boolean`</br>
+transformado-os em botões.
+#### ReadOnlyVarAttribute
+O atributo `ReadOnlyVarAttribute` pode ser adicionado a qualque campo que ele vai desativalo no inspetor</br>
+tornando somente leitura.
 ## [2.5.2] - 16/03/2023
 ### Fixed
 No método `DecimalRange` Tinha a possibilidade de ocorrer StackOverflow.
