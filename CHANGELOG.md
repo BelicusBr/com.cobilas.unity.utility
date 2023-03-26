@@ -1,4 +1,7 @@
 # Changelog
+## [2.7.1] - 25/03/2023
+### Fixed
+No `T:Luck.WhatProbability<T>(T[])` podia ocasionar um `InvalidCastException`.
 ## [2.6.0] - 18/03/2023
 ### Added
 Os atributos `AButtonAttribute`, `ARepeatButtonAttribute` e `ReadOnlyVarAttribute` foram adicionados.</br>
