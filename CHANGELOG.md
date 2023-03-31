@@ -1,4 +1,7 @@
 # Changelog
+## [2.7.2] - 30/03/2023
+### Fixed
+Ao utilizar `ReadOnlyVarAttribute` numa variavel que possuice um `CustomPropertyDrawer` esse `CustomPropertyDrawer` seria desativado.
 ## [2.7.1] - 25/03/2023
 ### Fixed
 No `T:Luck.WhatProbability<T>(T[])` podia ocasionar um `InvalidCastException`.
