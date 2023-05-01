@@ -8,7 +8,7 @@ using System.Collections.Generic;
 
 namespace Cobilas.Unity.Editor.Utility {
     public static class PropertyDrawerList {
-        private static Dictionary<string, GUIDrawer> list = new Dictionary<string, GUIDrawer>();
+        private static readonly Dictionary<string, GUIDrawer> list = new Dictionary<string, GUIDrawer>();
 
         static PropertyDrawerList()
             => list = new Dictionary<string, GUIDrawer>();
