@@ -1,6 +1,6 @@
 {
   "name": "com.cobilas.unity.utility",
-  "version": "2.7.2",
+  "version": "2.8.0",
   "displayName": "Cobilas Utility",
   "description": "Pacote de utilitarios para unity3d",
   "licensesUrl": "https://github.com/BelicusBr/com.cobilas.unity.utility/blob/main/LICENSE.md",
@@ -8,7 +8,7 @@
   "unity": "2019.1",
   "unityRelease": "0b5",
   "type": "library",
-  "author": "Cobilas CTB",
+  "author": "B\u00e9licusBr",
   "repository": {
     "url": "git+https://github.com/BelicusBr/com.cobilas.unity.utility.git",
     "type": "git"
@@ -23,12 +23,12 @@
   },
   "keywords": [
     "unity3d",
-    "utility",
-    "C#",
-    "CSharp"
+    "unity-csharp",
+    "unitypackage",
+    "unity-utility"
   ],
   "license": "MIT",
   "dependencies": {
-    "com.cobilas.core": "^2.0.0"
+    "com.cobilas.core": "3.0.0"
   }
 }
