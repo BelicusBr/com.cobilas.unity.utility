@@ -1,4 +1,10 @@
 # Changelog
+## [2.8.0] - 29/08/2023
+## Changed
+- As dependencias do pacote foram aluteradas.
+## [2.7.2-ch1] - 28/08/2023
+### Changed
+- O autor do pacote foi alterado de `Cobilas CTB` para `BélicusBr`.
 ## [2.7.2] - 30/03/2023
 ### Fixed
 Ao utilizar `ReadOnlyVarAttribute` numa variavel que possuice um `CustomPropertyDrawer` esse `CustomPropertyDrawer` seria desativado.
