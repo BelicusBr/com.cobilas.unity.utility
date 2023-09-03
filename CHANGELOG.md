@@ -1,7 +1,7 @@
 # Changelog
 ## [2.9.0-rc2] - 02/09/2023
 ### Removed
-- Removidos a classe `TypeUtilitarian` e as classe da pasta `Threading`
+- Removidos a classe `TypeUtilitarian` e as classe da pasta `Threading`.
 ## [2.9.0-rc1] - 02/09/2023
 ### Added
 - Foram adicionados os pacotes <kbd>com.cobilas.core</kbd> e <kbd>com.cobilas.unity.extensions</kbd> á este pacote.
