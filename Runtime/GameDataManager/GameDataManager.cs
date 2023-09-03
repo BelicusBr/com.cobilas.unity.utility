@@ -1,5 +1,4 @@
 ﻿using System.IO;
-using System.Text;
 using Cobilas.Unity.Utility.Cryptography;
 using System.Runtime.Serialization.Formatters.Binary;
 
