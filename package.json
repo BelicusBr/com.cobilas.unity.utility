@@ -1,6 +1,6 @@
 {
   "name": "com.cobilas.unity.utility",
-  "version": "2.9.0",
+  "version": "2.10.0",
   "displayName": "Cobilas Utility",
   "description": "Pacote de utilitarios para unity3d",
   "licensesUrl": "https://github.com/BelicusBr/com.cobilas.unity.utility/blob/main/LICENSE.md",
@@ -8,7 +8,7 @@
   "unity": "2019.1",
   "unityRelease": "0b5",
   "type": "library",
-  "author": "B\u00e9licusBr",
+  "author": "BélicusBr",
   "repository": {
     "url": "git+https://github.com/BelicusBr/com.cobilas.unity.utility.git",
     "type": "git"
@@ -19,7 +19,8 @@
   "homepage": "https://github.com/BelicusBr/com.cobilas.unity.utility#readme",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "init_pack": "npm pack --pack-destination C:/local.npm"
   },
   "keywords": [
     "unity3d",
@@ -27,5 +28,8 @@
     "unitypackage",
     "unity-utility"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "com.cobilas.unity.core.net4x": "1.2.1"
+  }
 }

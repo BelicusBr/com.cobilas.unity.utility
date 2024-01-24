@@ -1,3 +1,0 @@
-﻿#! lang_display:/*PT-BR*/
-#! lang_target:/*pt-br*/
-#! author:/*Cobilas*/
