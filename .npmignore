@@ -1,0 +1,5 @@
+.vscode/
+*.csproj
+*.sln
+node_modules/
+package-lock.json

@@ -1,3 +1,0 @@
-﻿#! menu/option/volumetext:/*Volume*/
-#! menu/option/mousesenct:/*Sencibilidade do mause*/
-#! menu/resolution/resolutions:/*Resolução*/
