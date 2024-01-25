@@ -73,7 +73,7 @@ namespace Cobilas.Unity.Editor.Utility {
         }
 
         private static GUIDrawer GetGUIDrawer(Type type) {
-            Type[] types = UnityTypeUtility.GetAllTypes();
+            Type[] types = TypeUtilitarian.GetTypes();
             foreach (Type item in types) {
                 if (item.IsSubclassOf(typeof(PropertyDrawer)) || item.IsSubclassOf(typeof(DecoratorDrawer))) {
                     CustomPropertyDrawer[] attributes = item.GetAttributes<CustomPropertyDrawer>(true);

@@ -10,12 +10,6 @@
     "precompiledReferences": [],
     "autoReferenced": true,
     "defineConstraints": [],
-    "versionDefines": [
-        {
-            "name": "com.cobilas.unity.core.net4x",
-            "expression": "1.1",
-            "define": "CORE1_1_0"
-        }
-    ],
+    "versionDefines": [],
     "noEngineReferences": false
 }

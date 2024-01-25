@@ -1,14 +1,14 @@
 {
   "name": "com.cobilas.unity.utility",
-  "version": "2.10.0",
+  "version": "2.10.1",
   "displayName": "Cobilas Utility",
-  "description": "Pacote de utilitarios para unity3d",
+  "description": "Unity package that has a set of utility scripts for Unity3d.",
   "licensesUrl": "https://github.com/BelicusBr/com.cobilas.unity.utility/blob/main/LICENSE.md",
   "changelogUrl": "https://github.com/BelicusBr/com.cobilas.unity.utility/blob/main/CHANGELOG.md",
   "unity": "2019.1",
   "unityRelease": "0b5",
   "type": "library",
-  "author": "BélicusBr",
+  "author": "B\u00e9licusBr",
   "repository": {
     "url": "git+https://github.com/BelicusBr/com.cobilas.unity.utility.git",
     "type": "git"
@@ -30,6 +30,6 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "com.cobilas.unity.core.net4x": "1.2.1"
+    "com.cobilas.unity.core.net4x": "1.2.2"
   }
 }
