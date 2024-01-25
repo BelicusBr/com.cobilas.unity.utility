@@ -1,100 +1,105 @@
 # Changelog
+## [2.10.1] - 25/01/2024
+### Fixed
+The dependency `com.cobilas.unity.core.net4x` was changed to version 1.2.2 because version 1.2.1 had compatibility issues with the C# 7.3 version.
+### Removed
+The `UnityTypeUtility` class was removed so that the `TypeUtilitarian` class already exists, which causes redundancy due to the fact that they have the same functions.
 ## [2.9.0-rc2] - 02/09/2023
 ### Removed
-- Removidos a classe `TypeUtilitarian` e as classe da pasta `Threading`.
+- Removed the `TypeUtilitarian` class and the classes from the `Threading` folder.
 ## [2.9.0-rc1] - 02/09/2023
 ### Added
-- Foram adicionados os pacotes <kbd>com.cobilas.core</kbd> e <kbd>com.cobilas.unity.extensions</kbd> á este pacote.
+- The packages <kbd>com.cobilas.core</kbd> and <kbd>com.cobilas.unity.extensions</kbd> were added to this package.
 ## [2.8.0] - 29/08/2023
 ### Changed
-- As dependencias do pacote foram aluteradas.
+- Package dependencies have been changed.
 ## [2.7.2-ch1] - 28/08/2023
 ### Changed
-- O autor do pacote foi alterado de `Cobilas CTB` para `BélicusBr`.
+- The package author was changed from `Cobilas CTB` to `BélicusBr`.
 ## [2.7.2] - 30/03/2023
-### Fixed
-Ao utilizar `ReadOnlyVarAttribute` numa variavel que possuice um `CustomPropertyDrawer` esse `CustomPropertyDrawer` seria desativado.
+###Fixed
+When using `ReadOnlyVarAttribute` in a variable that has a `CustomPropertyDrawer` this `CustomPropertyDrawer` would be disabled.
 ## [2.7.1] - 25/03/2023
-### Fixed
-No `T:Luck.WhatProbability<T>(T[])` podia ocasionar um `InvalidCastException`.
+###Fixed
+In `T:Luck.WhatProbability<T>(T[])` it could cause an `InvalidCastException`.
 ## [2.6.0] - 18/03/2023
 ### Added
-Os atributos `AButtonAttribute`, `ARepeatButtonAttribute` e `ReadOnlyVarAttribute` foram adicionados.</br>
-As classes `GarbageCollector` e `MonitorStatus` foram adicionados.
+The attributes `AButtonAttribute`, `ARepeatButtonAttribute` and `ReadOnlyVarAttribute` have been added.</br>
+The `GarbageCollector` and `MonitorStatus` classes have been added.
 #### AButtonAttribute & ARepeatButtonAttribute
-Os atributos `ARepeatButtonAttribute` e `AButtonAttribute` podem ser adicionados á um campo de tipo `Boolean`</br>
-transformado-os em botões.
+The `ARepeatButtonAttribute` and `AButtonAttribute` attributes can be added to a `Boolean` field.
+turned them into buttons.
 #### ReadOnlyVarAttribute
-O atributo `ReadOnlyVarAttribute` pode ser adicionado a qualque campo que ele vai desativalo no inspetor</br>
-tornando somente leitura.
+The `ReadOnlyVarAttribute` attribute can be added to any field and it will disable it in the inspector</br>
+making it read-only.
 ## [2.5.2] - 16/03/2023
-### Fixed
-No método `DecimalRange` Tinha a possibilidade de ocorrer StackOverflow.
-### Fixed
-Ao cancelar uma `UnityTask` ao entrar no modo editor pode ocorrer um `InvalidOperationalException`.
+###Fixed
+In the `DecimalRange` method there was a possibility of StackOverflow occurring.
+###Fixed
+When canceling a `UnityTask` when entering editor mode, an `InvalidOperationalException` may occur.
 ## [2.3.2] - 12/02/2023
 ### Fixed (EditorUnityTaskPool)
-Quando o editor entrava no modo `PlayModeStateChange.ExitingPlayMode` poderia acontecer da ação assincrona ter uma nova requisição de cancelamento
-solicitada novamente o que gera um erro.
-Agora antes de cancelar a ação assincrona e verificado se á ação ainda não foi cancelada e descartada.
+When the editor entered `PlayModeStateChange.ExitingPlayMode` mode, the asynchronous action could have a new cancellation request
+requested again which generates an error.
+Now before canceling the asynchronous action, check that the action has not yet been canceled and discarded.
 ## [1.0.30] - 30/01/2023
 ### Changed
-- Remoção de atribuições desnecessárias.
-- Transformando possiveis campos em `readonly`.
-- No método `void:RepaintTexture2D.Paint()` a instrução `modifiedTexture.SetPixels` foi alterada para `modifiedTexture.SetPixels32` por questões de desempenho.
-### Fixed
-- O parâmetro `UnityTaskResult result` do construdo da classe `UnityTask` não erá atribuido.
+- Removal of unnecessary assignments.
+- Transforming possible fields into `readonly`.
+- In the `void:RepaintTexture2D.Paint()` method the `modifiedTexture.SetPixels` instruction was changed to `modifiedTexture.SetPixels32` for performance reasons.
+###Fixed
+- The `UnityTaskResult result` parameter of the `UnityTask` class construct will not be assigned.
 ## [1.0.29] 09/01/2023
-### Add
-Classes asincronas foram adicionadas.
-Corotinas com mais funções adicionadas.
-## [1.0.28] 23/11/2022
-### Add
-Foi adicionado em `UnityFile` os métodos `void:UnityFile.InitEditorCSharpFile()` e 
+###Add
+Asynchronous classes have been added.
+Coroutines with more functions added.
+## [1.0.28] 23/11/2021
+###Add
+The methods `void:UnityFile.InitEditorCSharpFile()` and
 `void:UnityFile.InitEditorWinCSharpFile()`
 ## [1.0.26] 11/11/2022
-### ChangeVersion
-ChangeVersion se tornou com.cobilas.unity.changeversion@1.0.0
+###ChangeVersion
+ChangeVersion became com.cobilas.unity.changeversion@1.0.0
 ### DebugConsole
-DebugConsole se tornou com.cobilas.unity.debugconsole@1.0.0
+DebugConsole became com.cobilas.unity.debugconsole@1.0.0
 ## [1.0.24] 05/11/2022
 ### (Fix)ChangeVersionWin.cs
-O método `ChangeVersionWin.LoadConfig()` não possuia uma verificação que determina<br/>
-se o arquivo Config.txt existe.
+The `ChangeVersionWin.LoadConfig()` method did not have a check that determines<br/>
+whether the Config.txt file exists.
 ## [1.0.23] 20/09/2022
 ### (Change) ChangeVersion
-O ChangeVersion foi transformado em janela agora.
+The ChangeVersion has been turned into a window now.
 ## [1.0.22] 13/09/2022
 ### (Fix)DebugConsole.cs
-O namespace `System.IO` foi realocado pra fora da condição `#if UNITY_EDITOR`.
-## [1.0.21] 05/09/2022
+The `System.IO` namespace has been relocated out of the `#if UNITY_EDITOR` condition.
+## [1.0.21] 05/09/2021
 ## Obsolete
 - CobilasPaths.cs
 - CobilasRandom.cs
 - CobilasFile.cs
 - CobilasFolder.cs
 ## [1.0.20] 04/09/2022
-### Add
-Foi adicionado GameDataManager para guarda dados do jogo, em suma o bom e velho savegame.<br/>
-A classe UnityPath foi adicionado.<br/>
-A classe Randomico foi adicionado.<br/>
-### Change
-As classes `CobilasPaths` e `CobilasRandom` foram substituidos por `UnityPath` e `Randomico`.
+###Add
+GameDataManager was added to store game data, in short the good old savegame.<br/>
+The UnityPath class has been added.<br/>
+The Randomico class has been added.<br/>
+###Change
+The classes `CobilasPaths` and `CobilasRandom` have been replaced by `UnityPath` and `Randomico`.
 ## [1.0.19] 03/09/2022
-### Add
+###Add
 - Editor\Win\DebugConsoleWin.cs
 - Runtime\DebugConsole\DebugConsole.cs
 ## [1.0.18] 27/08/2002
-### Add
+###Add
 - Editor\ChangeVersion.cs
 - Runtime\CompareObject.cs
 - Runtime\RepaintTexture2D.cs
 - Runtime\PurposefulErrors.cs
 ## [1.0.16] 15/08/2022
 ### Changed
-A constante "BlankSpace" foi alterada de `protected const float BlankSpace;` para `public const float BlankSpace;`.<br/>
-A propriedade SingleLineHeight foi alterada de `protected float SingleLineHeight;` para `public static float SingleLineHeight;`.<br/>
-A propriedade SingleRowHeightWithBlankSpace foi alterada de `protected float SingleRowHeightWithBlankSpace;` para `public static float SingleRowHeightWithBlankSpace;`.<br/>
+The "BlankSpace" constant has been changed from `protected const float BlankSpace;` to `public const float BlankSpace;`.<br/>
+The SingleLineHeight property has been changed from `protected float SingleLineHeight;` to `public static float SingleLineHeight;`.<br/>
+The SingleRowHeightWithBlankSpace property has been changed from `protected float SingleRowHeightWithBlankSpace;` to `public static float SingleRowHeightWithBlankSpace;`.<br/>
 ## [1.0.15] 13/08/2022
 - Change Editor\Cobilas.Unity.Editor.Utility.asmdef
 - Change Editor\CobilasFile.cs
@@ -102,5 +107,5 @@ A propriedade SingleRowHeightWithBlankSpace foi alterada de `protected float Sin
 ## [1.0.14] 10/08/2022
 - Merge com.cobilas.unity.editor.utility@1.0.7
 ## [0.0.1] 15/07/2022
-### Repositorio com.cobilas.unity.utility iniciado
-- Lançado para o GitHub
+### Repository com.cobilas.unity.utility started
+- Released to GitHub
