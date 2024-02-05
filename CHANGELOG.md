@@ -1,4 +1,9 @@
 # Changelog
+## [2.10.2] - 05/02/2024
+- ### Changed
+- - Updated dependency `com.cobilas.unity.core.net4x` to version `1.4.1`.
+- - This update includes bug fixes and new features that do not directly impact this package.
+
 ## [2.10.1] - 25/01/2024
 ### Fixed
 The dependency `com.cobilas.unity.core.net4x` was changed to version 1.2.2 because version 1.2.1 had compatibility issues with the C# 7.3 version.
