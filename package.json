@@ -1,6 +1,6 @@
 {
   "name": "com.cobilas.unity.utility",
-  "version": "2.10.2",
+  "version": "2.10.3",
   "displayName": "Cobilas Utility",
   "description": "Unity package that has a set of utility scripts for Unity3d.",
   "licensesUrl": "https://github.com/BelicusBr/com.cobilas.unity.utility/blob/main/LICENSE.md",
@@ -19,8 +19,9 @@
   "homepage": "https://github.com/BelicusBr/com.cobilas.unity.utility#readme",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "init_pack": "npm pack --pack-destination C:/local.npm"
+    "npm_pack": "npm pack --pack-destination C:/local.npm",
+    "npm_push": "@powershell -Command . cobilas.package.funcs.ps1 ; npm_push -package_name %npm_package_name% -package_version %npm_package_version%",
+	"npm_pack_push": "npm run npm_pack && npm run npm_push"
   },
   "keywords": [
     "unity3d",
