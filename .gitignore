@@ -1,5 +1,6 @@
 .libs/
 obj/
 bin/
-*.sln
 node_modules/
+*.sln
+*.ps1
