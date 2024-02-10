@@ -4,7 +4,7 @@ using System.Collections.Generic;
 namespace Cobilas.Unity.Utility {
     public sealed class CompareObject {
         private object[] compareList;
-        private CompareResult result;
+        private readonly CompareResult result;
         private event Action<CompareResult> compareAction;
 
         public CompareObject(int capacity) {
@@ -28,7 +28,7 @@ namespace Cobilas.Unity.Utility {
 
         public sealed class CompareResult {
             private bool result;
-            private object[] compareList;
+            private readonly object[] compareList;
 
             public bool Result => result;
 

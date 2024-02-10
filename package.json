@@ -1,22 +1,36 @@
 {
   "name": "com.cobilas.unity.utility",
-  "version": "1.0.19",
+  "version": "2.10.3",
   "displayName": "Cobilas Utility",
-  "description": "Pacote de utilitarios para unity3d",
+  "description": "Unity package that has a set of utility scripts for Unity3d.",
   "licensesUrl": "https://github.com/BelicusBr/com.cobilas.unity.utility/blob/main/LICENSE.md",
   "changelogUrl": "https://github.com/BelicusBr/com.cobilas.unity.utility/blob/main/CHANGELOG.md",
   "unity": "2019.1",
   "unityRelease": "0b5",
-  "type": "cb-utility",
-
-  "author": {
-    "name": "Cobilas CTB"
-  },
+  "type": "library",
+  "author": "B\u00e9licusBr",
   "repository": {
-    "url" : "https://github.com/BelicusBr/com.cobilas.unity.utility.git",
-    "type" : "git"
+    "url": "git+https://github.com/BelicusBr/com.cobilas.unity.utility.git",
+    "type": "git"
   },
-  "publishConfig": {
-    "registry":"https://npm.pkg.github.com/@BelicusBr"
+  "bugs": {
+    "url": "https://github.com/BelicusBr/com.cobilas.unity.utility/issues"
+  },
+  "homepage": "https://github.com/BelicusBr/com.cobilas.unity.utility#readme",
+  "main": "index.js",
+  "scripts": {
+    "npm_pack": "npm pack --pack-destination C:/local.npm",
+    "npm_push": "@powershell -Command . cobilas.package.funcs.ps1 ; npm_push -package_name %npm_package_name% -package_version %npm_package_version%",
+	"npm_pack_push": "npm run npm_pack && npm run npm_push"
+  },
+  "keywords": [
+    "unity3d",
+    "unity-csharp",
+    "unitypackage",
+    "unity-utility"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "com.cobilas.unity.core.net4x": "1.4.1"
   }
 }

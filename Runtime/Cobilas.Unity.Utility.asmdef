@@ -1,15 +1,13 @@
 {
     "name": "Cobilas.Unity.Utility",
-    "references": [],
+    "references": [
+        "Cobilas.Core.Net4x"
+    ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": true,
-    "precompiledReferences": [
-        "CobilasCore.dll",
-        "Cobilas.Collections.dll",
-        "CobilasCore.Extension.dll"
-    ],
+    "precompiledReferences": [],
     "autoReferenced": true,
     "defineConstraints": [],
     "versionDefines": [],
