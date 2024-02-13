@@ -184,7 +184,6 @@ namespace Cobilas.Unity.Utility {
                 smin = minPorc < maxPorc ? minPorc : maxPorc;
 
                 compri = smin + ((decimal)value * compri);
-                UnityEngine.Debug.Log(compri);
 
                 if (compri < 0) return -compri * decimal.MinValue;
                 else if (compri > 0) return compri * decimal.MaxValue;
