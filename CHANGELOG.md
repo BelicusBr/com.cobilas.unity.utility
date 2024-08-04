@@ -1,3 +1,9 @@
+# [2.10.5] (04/08/2024)
+## Fixed
+Fixed value production problem in `Randomico.DoubleRange(double, double)` method.
+### Details
+The `Randomico.DoubleRange(double, double)` method did not use the `Randomico.value` property which caused the method to produce a fixed value.
+
 # [2.10.4] (13/02/2024)
 - ## Changed
 - - Removed an unnecessary `Debug.Log` from the `Random.Decimal Range` method.
