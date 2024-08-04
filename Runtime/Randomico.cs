@@ -164,7 +164,7 @@ namespace Cobilas.Unity.Utility {
             => UERandom.Range(float.MinValue, float.MaxValue);
 
         public static double DoubleRange(double min, double max)
-            => (min < max ? min : max) + 1d * Math.Abs(min - max);
+            => (min < max ? min : max) + value * Math.Abs(min - max);
 
         public static double DoubleRange(double max)
             => DoubleRange(double.MinValue, max);
